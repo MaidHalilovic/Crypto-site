@@ -1,0 +1,36 @@
+.mainContainer {
+  padding: 50px;
+}
+
+.navBar {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+.navBar p {
+  color: gray;
+}
+.description {
+  margin-top: 20px;
+  display: flex;
+  color: gray;
+}
+
+.Buttons {
+  display: flex;
+  gap: 20px;
+  height: 45px;
+  margin-top: 40px;
+}
+.Buttons button {
+  width: 100px;
+  background-color: lightgray;
+  cursor: pointer;
+  color: black;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.Buttons button:hover {
+  background-color: darkgray;
+}

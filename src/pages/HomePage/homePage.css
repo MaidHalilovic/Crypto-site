@@ -1,0 +1,102 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.NavBar {
+  margin-top: 100px;
+}
+
+.NavBar-2 {
+  display: flex;
+  gap: 40px;
+  font-size: 24px;
+  width: auto;
+}
+.Text {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  position: relative;
+  right: 200px;
+  top: 200px;
+}
+.NavBar-2 button {
+  width: 150px;
+  height: 50px;
+  background-color: #333;
+  color: white;
+  font-size: 18px;
+  border-radius: 10px;
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.NavBar-2 button:hover {
+  transform: scale(1.1);
+}
+
+.NavBar-3 {
+  position: relative;
+  top: 150px;
+  background-color: #333;
+  color: white;
+  display: flex;
+  flex-direction: row;
+  gap: 100px;
+  height: 300px;
+}
+.NavBar-3 h2 {
+  position: relative;
+  top: 80px;
+  left: 70px;
+}
+.btn {
+  position: relative;
+  right: 900px;
+  top: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn button {
+  width: 150px;
+  height: 50px;
+  background-color: white;
+  color: color;
+  font-size: 18px;
+  border-radius: 10px;
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.btn button:hover {
+  transform: scale(1.1);
+}
+
+.NavBar-4 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  top: 300px;
+  height: 200px;
+  position: relative;
+  gap: 50px;
+}
+
+.NavBar-4 button {
+  width: 150px;
+  height: 50px;
+  background-color: #333;
+  color: white;
+  font-size: 18px;
+  border-radius: 10px;
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.NavBar-4 button:hover {
+  transform: scale(1.1);
+}

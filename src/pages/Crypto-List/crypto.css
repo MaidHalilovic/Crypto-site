@@ -1,0 +1,25 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.NavBar {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+.NavBar input {
+  width: 400px;
+  height: 40px;
+  border-radius: 20px;
+  background-color: lightgray;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 17px;
+}

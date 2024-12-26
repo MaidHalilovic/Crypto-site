@@ -1,0 +1,14 @@
+.Footer {
+  position: relative;
+  top: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 50px;
+  flex-direction: column;
+  background-color: gray;
+}
+.Footer a {
+  padding: 10px;
+}
