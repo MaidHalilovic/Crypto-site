@@ -1,0 +1,41 @@
+.List {
+  display: flex;
+  width: 600px;
+  align-items: center;
+  justify-content: space-between;
+}
+.cards {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.card {
+  display: flex;
+  gap: 80px;
+  align-items: center;
+  cursor: pointer;
+  text-align: left;
+  width: 100%;
+  box-sizing: border-box;
+}
+.card:hover {
+  opacity: 1;
+  background-color: rgb(238, 238, 238);
+}
+
+.card button {
+  width: 80px;
+  height: 40px;
+  border-radius: 20px;
+  font-size: 18px;
+}
+.oneDiv {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  right: 70px;
+  text-align: left;
+  width: 100%;
+  box-sizing: border-box;
+}
