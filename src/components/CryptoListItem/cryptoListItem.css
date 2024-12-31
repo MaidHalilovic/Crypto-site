@@ -39,3 +39,28 @@
   width: 100%;
   box-sizing: border-box;
 }
+
+.trading {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  background-color: rgb(66, 66, 241);
+  color: white;
+  padding: 30px;
+}
+.trading h2 {
+  width: 500px;
+}
+
+.trading button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  font-size: 18px;
+  width: 250px;
+  height: 40px;
+  border-radius: 10px;
+  border: none;
+  background-color: white;
+}

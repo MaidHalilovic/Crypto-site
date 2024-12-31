@@ -3,12 +3,24 @@ import { Button } from "antd";
 import { StarOutlined, StarFilled } from "@ant-design/icons";
 import { FiArrowUpRight } from "react-icons/fi";
 import { GoArrowDownLeft } from "react-icons/go";
+import { useColStyle } from "antd/es/grid/style";
+import { useContext } from "react";
+import { AppContext } from "../../context/AppContext";
 
 function CryptoListItem({ coin }) {
+  const { favorites, addCoinToFavorites } = useContext(AppContext);
+
+  const isFavorite = favorites.find((favorit) => favorit.uuid === coin.uuid);
+
   return (
     <div className='card'>
-      <StarOutlined />
-      {/* <StarFilled /> */}
+      <div onClick={() => addCoinToFavorites(coin)}>
+        {isFavorite ? (
+          <StarFilled style={{ fontSize: "20px", color: "black" }} />
+        ) : (
+          <StarOutlined style={{ fontSize: "20px" }} />
+        )}
+      </div>
 
       <img
         src={coin.iconUrl}

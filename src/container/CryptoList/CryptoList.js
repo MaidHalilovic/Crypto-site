@@ -4,6 +4,8 @@ import { Button } from "antd";
 import axios from "axios";
 import CryptoListItem from "../../components/CryptoListItem/CryptoListItem";
 import { Pagination } from "antd";
+import { ArrowRightOutlined } from "@ant-design/icons";
+import FooterCryptoList from "../../components/FooterCryptoList/FooterCryptoList";
 
 function CryptoList() {
   const [currentPage, setCurrentPage] = useState(1);
@@ -27,19 +29,19 @@ function CryptoList() {
   // };
 
   const fetchCoins = async () => {
-    // const offset = coinsPerPage * (currentPage - 1);
+    const offset = coinsPerPage * (currentPage - 1);
 
     const options = {
       method: "GET",
-      url: `https://coinranking1.p.rapidapi.com/coins`,
+      url: `https://coinranking1.p.rapidapi.com/coins?limit=${coinsPerPage}&offset=${offset}`,
       params: {
         referenceCurrencyUuid: "yhjMzLPhuIDl",
         timePeriod: "24h",
         tiers: "1",
         orderBy: "marketCap",
         orderDirection: "desc",
-        limit: "1000",
-        offset: "0",
+        limit: "50",
+        offset: "1",
       },
       headers: {
         "x-rapidapi-key": "fa3ad0bc85mshf98160e7de354a0p1cd16ajsne4c113ec1e05",
@@ -49,7 +51,6 @@ function CryptoList() {
 
     try {
       const response = await axios.request(options);
-      console.log(response.data);
 
       setCoins(response.data.data.coins);
     } catch (error) {
@@ -106,8 +107,18 @@ function CryptoList() {
               />
               <br />
             </>
+            <div className='trading'>
+              <h2>
+                Create a Coinbase account to trade crypto. It’s quick, easy, and
+                secure.
+              </h2>
+              <button>
+                Start Trading <ArrowRightOutlined />
+              </button>
+            </div>
           </div>
         </div>
+        <FooterCryptoList />
       </div>
     </div>
   );
